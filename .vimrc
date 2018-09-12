@@ -1,6 +1,6 @@
 "Vim Plug Setup
 call plug#begin('~/.vim/plugged')
-Plug 'henrynewcomer/vim-theme-papaya'
+Plug 'joshdick/onedark.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'itchyny/lightline.vim'
 Plug 'pangloss/vim-javascript'
@@ -16,17 +16,12 @@ set t_Co=256
 set tabstop=2
 set shiftwidth=2
 
-
 "Vim theme/color-scheme
 set background=dark
-colorscheme papaya
+colorscheme onedark
 filetype plugin indent on
 syntax on
-
-if (has("termguicolors"))
-  set termguicolors
-endif
-
+filetype plugin indent on
 
 "Javascript syntax spec
 let g:javascript_plugin_jsdoc = 1
