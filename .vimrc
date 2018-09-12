@@ -1,8 +1,9 @@
 "Vim Plug Setup
 call plug#begin('~/.vim/plugged')
-Plug 'joshdick/onedark.vim'
-Plug 'tpope/vim-vinegar'
 Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'mhinz/vim-startify'
+Plug 'joshdick/onedark.vim'
 Plug 'pangloss/vim-javascript'
 call plug#end()
 
@@ -35,7 +36,7 @@ filetype on
 filetype plugin indent on
 filetype plugin indent on
 
-"Javascript syntax spec
+"Javascript syntax highlighting spec
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
@@ -43,5 +44,5 @@ let g:jsx_ext_required = 0
 
 "Auto-completes css
 autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
-"Removes white spaces on save
-autocmd BufWritePre * :%s/\s\+$//e
+"Startify bookmark files
+let g:startify_bookmarks = [ '.vimrc' ]
