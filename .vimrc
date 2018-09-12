@@ -12,11 +12,15 @@ set shell=sh
 set nocompatible
 set number
 set laststatus=2
+set visualbell
 set encoding=utf-8
 set t_Co=256
+set nowrap
 set tabstop=2
 set shiftwidth=2
-set visualbell
+set expandtab
+set smartindent
+set autoindent
 
 "Key mapping stuff
 let mapleader=" "
@@ -37,5 +41,7 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
-"auto-complete css
+"Auto-completes css
 autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
+"Removes white spaces on save
+autocmd BufWritePre * :%s/\s\+$//e
