@@ -1,4 +1,4 @@
-"Vim Plug Setup
+"Vim-Plug Setup
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-vinegar'
@@ -8,33 +8,38 @@ Plug 'pangloss/vim-javascript'
 call plug#end()
 
 
-"Vim Config
+"Base setup
 set shell=sh
 set nocompatible
 set number
 set laststatus=2
 set visualbell
 set encoding=utf-8
-set t_Co=256
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
-set autoindent
+set showmatch
+set history=1000
+set undolevels=1000
 
-"Key mapping stuff
+"Indention settings
+set autoindent
+set smartindent
+set smarttab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+"Key mapping
 let mapleader=" "
 map <leader>s :w! <CR>
 map <leader>r :source ~/.vimrc<CR>
 
-"Vim theme/color-scheme
-set background=dark
-colorscheme onedark
+"Color-scheme/file specific syntax highlighting
 syntax on
 filetype on
 filetype plugin indent on
-filetype plugin indent on
+set t_Co=256
+set background=dark
+colorscheme onedark
 
 "Javascript syntax highlighting spec
 let g:javascript_plugin_jsdoc = 1
