@@ -16,6 +16,7 @@ set laststatus=2
 set visualbell
 set encoding=utf-8
 set nowrap
+set cursorline
 set showmatch
 set history=1000
 set undolevels=1000
@@ -27,6 +28,10 @@ set smarttab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+"Search settings
+set incsearch
+set hlsearch
 
 "Key mapping
 let mapleader=" "
