@@ -37,6 +37,7 @@ set hlsearch
 let mapleader=" "
 map <leader>s :w! <CR>
 map <leader>r :source ~/.vimrc<CR>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 "Color-scheme/file specific syntax highlighting
 syntax on
