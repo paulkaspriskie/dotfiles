@@ -22,6 +22,7 @@ set ruler
 set showmatch
 set history=100
 set undolevels=100
+set scrolloff=10 
 
 "File type settings
 filetype on
@@ -33,7 +34,7 @@ set autoindent
 set smartindent
 set smarttab
 set tabstop=2
-set softtabstop=2
+set softtabstop=0 noexpandtab
 set shiftwidth=2
 
 "Search settings
@@ -48,8 +49,8 @@ colorscheme onedark
 
 "Persistent Undo
 if has('persistent_undo')
-	set undofile
-	set undodir=~/.vim/undodir
+  set undofile
+  set undodir=~/.vim/undodir
 endif
 
 "Key mapping
