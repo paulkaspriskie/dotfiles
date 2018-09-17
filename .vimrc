@@ -9,6 +9,7 @@ call plug#end()
 
 
 "Base setup
+syntax on
 set shell=sh
 set nocompatible
 set number
@@ -20,7 +21,12 @@ set cursorline
 set ruler
 set showmatch
 set history=100
-set undolevels=100 
+set undolevels=100
+
+"File type settings
+filetype on
+filetype plugin on
+filetype indent on
 
 "Indention settings
 set autoindent
@@ -31,9 +37,20 @@ set softtabstop=2
 set shiftwidth=2
 
 "Search settings
-set incsearch
 set hlsearch
+set incsearch
 set ignorecase
+
+"Color-scheme
+set t_Co=256
+set background=dark
+colorscheme onedark
+
+"Persistent Undo
+if has('persistent_undo')
+	set undofile
+	set undodir=~/.vim/undodir
+endif
 
 "Key mapping
 let mapleader=" "
@@ -41,14 +58,6 @@ map <f2> :w! <CR>
 map <f3> :source ~/.vimrc<CR>
 map <leader>r :let @/ = ""<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-
-"Color-scheme/file specific syntax highlighting
-syntax on
-filetype on
-filetype plugin indent on
-set t_Co=256
-set background=dark
-colorscheme onedark
 
 "Javascript syntax highlighting spec
 let g:javascript_plugin_jsdoc = 1
