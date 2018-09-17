@@ -12,17 +12,19 @@ call plug#end()
 syntax on
 set shell=sh
 set nocompatible
-set number
+set hidden
 set laststatus=2
-set visualbell
 set encoding=utf-8
-set nowrap
+set visualbell
+set history=100
+set undolevels=100
+
+"Editor settings
+set number
 set cursorline
 set ruler
 set showmatch
-set history=100
-set undolevels=100
-set scrolloff=10 
+set nowrap
 
 "File type settings
 filetype on
@@ -33,8 +35,9 @@ filetype indent on
 set autoindent
 set smartindent
 set smarttab
+set noexpandtab
 set tabstop=2
-set softtabstop=0 noexpandtab
+set softtabstop=0 
 set shiftwidth=2
 
 "Search settings
@@ -66,7 +69,10 @@ let g:javascript_plugin_ngdoc = 1
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
 
-"Auto-completes css
+"Auto-complete settings
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
+autocmd FileType js set omnifunc=javascriptcomplete#CompleteJS
+
 "Startify bookmark files
 let g:startify_bookmarks = [ '.vimrc' ]
