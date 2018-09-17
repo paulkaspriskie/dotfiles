@@ -17,9 +17,10 @@ set visualbell
 set encoding=utf-8
 set nowrap
 set cursorline
+set ruler
 set showmatch
-set history=1000
-set undolevels=1000
+set history=100
+set undolevels=100 
 
 "Indention settings
 set autoindent
@@ -32,11 +33,13 @@ set shiftwidth=2
 "Search settings
 set incsearch
 set hlsearch
+set ignorecase
 
 "Key mapping
 let mapleader=" "
-map <leader>s :w! <CR>
-map <leader>r :source ~/.vimrc<CR>
+map <f2> :w! <CR>
+map <f3> :source ~/.vimrc<CR>
+map <leader>r :let @/ = ""<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 "Color-scheme/file specific syntax highlighting
