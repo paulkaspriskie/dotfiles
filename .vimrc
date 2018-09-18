@@ -42,8 +42,8 @@ set smartindent
 set smarttab
 set noexpandtab
 set tabstop=2
-set softtabstop=0 
-set shiftwidth=2
+set softtabstop=2 
+set shiftwidth=2 
 
 "Search settings
 set hlsearch
@@ -64,8 +64,7 @@ endif
 "Key mapping
 let mapleader=" "
 map <f2> :w! <CR>
-map <f3> :source ~/.vimrc<CR>
-map <leader>r :let @/ = ""<CR>
+map <f3> :source ~/.vimrc \| let @/ = ""<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 "Javascript syntax highlighting spec
