@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-startify'
+Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
 Plug 'pangloss/vim-javascript'
 call plug#end()
@@ -13,8 +14,8 @@ syntax on
 set shell=sh
 set nocompatible
 set hidden
-set laststatus=2
 set encoding=utf-8
+set laststatus=2
 set visualbell
 set history=100
 set undolevels=100
@@ -25,6 +26,7 @@ set cursorline
 set ruler
 set showmatch
 set nowrap
+set linebreak
 
 "File type settings
 filetype on
@@ -52,8 +54,8 @@ colorscheme onedark
 
 "Persistent Undo
 if has('persistent_undo')
-  set undofile
-  set undodir=~/.vim/undodir
+	set undofile
+	set undodir=~/.vim/undodir
 endif
 
 "Key mapping
