@@ -1,8 +1,8 @@
-"Vim-Plug Setup
+" Vim-Plug Setup
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
@@ -28,6 +28,8 @@ set ruler
 set showmatch
 set nowrap
 set linebreak
+set scrolloff=10
+set sidescrolloff=15
 
 "File type settings
 filetype on
