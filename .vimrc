@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
 Plug 'pangloss/vim-javascript'
@@ -54,8 +55,8 @@ colorscheme onedark
 
 "Persistent Undo
 if has('persistent_undo')
-	set undofile
-	set undodir=~/.vim/undodir
+  set undofile
+  set undodir=~/.vim/undodir
 endif
 
 "Key mapping
