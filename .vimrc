@@ -20,8 +20,9 @@ set laststatus=2
 set visualbell
 set history=100
 set undolevels=100
+set lazyredraw
 
-"Editor settings
+" Editor settings
 set number
 set cursorline
 set ruler
@@ -30,6 +31,7 @@ set nowrap
 set linebreak
 set scrolloff=10
 set sidescrolloff=15
+set backspace=indent,eol,start
 
 "File type settings
 filetype on
@@ -42,8 +44,8 @@ set smartindent
 set smarttab
 set noexpandtab
 set tabstop=2
-set softtabstop=2 
-set shiftwidth=2 
+set softtabstop=2
+set shiftwidth=2
 
 "Search settings
 set hlsearch
@@ -65,7 +67,8 @@ endif
 let mapleader=" "
 map <f2> :w! <CR>
 map <f3> :source ~/.vimrc \| let @/ = ""<CR>
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-lu>
+set pastetoggle=<F4>
 
 "Javascript syntax highlighting spec
 let g:javascript_plugin_jsdoc = 1
@@ -77,6 +80,9 @@ let g:jsx_ext_required = 0
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
 autocmd FileType js set omnifunc=javascriptcomplete#CompleteJS
+
+"Removes trailing white spaces before save.
+autocmd BufWritePre * :%s/\s\+$//e
 
 "Startify bookmark files
 let g:startify_bookmarks = [ '.vimrc' ]
