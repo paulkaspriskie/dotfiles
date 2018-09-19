@@ -1,4 +1,4 @@
-" Vim-Plug Setup
+"Vim-Plug Setup
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
@@ -22,7 +22,7 @@ set history=100
 set undolevels=100
 set lazyredraw
 
-" Editor settings
+"Editor settings
 set number
 set cursorline
 set ruler
@@ -43,7 +43,7 @@ set autoindent
 set smartindent
 set smarttab
 set noexpandtab
-set tabstop=2
+set tabstop=8
 set softtabstop=2
 set shiftwidth=2
 
