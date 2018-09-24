@@ -1,7 +1,6 @@
+# This is my .gitignore, not much to see here...
 .DS_Store
 */.DS_Store
-
-# ignore node modules and debug files
 node_modules/
 npm-debug.log
 package-lock.json

@@ -5,6 +5,7 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
+Plug 'sirver/ultisnips'
 Plug 'joshdick/onedark.vim'
 Plug 'pangloss/vim-javascript'
 call plug#end()
@@ -81,8 +82,13 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType scss set omnifunc=csscomplete#CompleteCSS
 autocmd FileType js set omnifunc=javascriptcomplete#CompleteJS
 
+"Snippet configuration
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsSnippetDirectories = ['/Users/tug36513/.vim/UltiSnips', 'UltiSnips']
+
 "Removes trailing white spaces before save.
 autocmd BufWritePre * :%s/\s\+$//e
 
 "Startify bookmark files
 let g:startify_bookmarks = [ '.vimrc' ]
+let g:startify_bookmarks = [ '.tmux.conf' ]
