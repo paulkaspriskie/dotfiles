@@ -2,7 +2,7 @@
  *These are my dotefiles, not much to see here...*
 
 ## .vimrc
-### Note this .vimrc uses vim-plug (a vim plugin manager)
+**Note this .vimrc uses vim-plug (a vim plugin manager)**
 In order to install the plugins specified in .vimrc you must first:
 
 > Install vim-plug:
