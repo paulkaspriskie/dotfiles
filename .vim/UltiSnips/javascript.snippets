@@ -1,3 +1,7 @@
+###############################
+# ---- basic js snippets ---- #
+###############################
+
 # Console log
 snippet cl "console.log(...)" b
 console.log($0);
@@ -22,4 +26,25 @@ snippet ff "anonymous function" i
 function($1) {
   $2
 }$3
+endsnippet
+
+# arrow function
+snippet af "arrow function" i
+($1) => {
+  $2
+}$3
+endsnippet
+
+#############################
+# ---- nodeJS snippets ---- #
+#############################
+
+# require module
+snippet re "require module"
+var $1 = require('$1');
+endsnippet
+
+# module.exports
+snippet me "module.exports" b
+module.exports = $0
 endsnippet
