@@ -1,0 +1,25 @@
+# Console log
+snippet cl "console.log(...)" b
+console.log($0);
+endsnippet
+
+# if statement
+snippet if "if statement" i
+if ($1) {
+  $2
+}$3
+endsnippet
+
+# function
+snippet fun "named function" i
+function $1($2) {
+  $3
+}$4
+endsnippet
+
+# anonymous function
+snippet ff "anonymous function" i
+function($1) {
+  $2
+}$3
+endsnippet
