@@ -19,9 +19,10 @@ set hidden
 set encoding=utf-8
 set laststatus=2
 set visualbell
+set lazyredraw
 set history=100
 set undolevels=100
-set lazyredraw
+set clipboard=unnamed
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
