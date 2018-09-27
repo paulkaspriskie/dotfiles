@@ -1,0 +1,10 @@
+# Better navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+
+# Git aliases
+alias undopush="git push -f origin HEAD^:master"
+
