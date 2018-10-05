@@ -66,7 +66,6 @@ if has('persistent_undo')
 endif
 
 "Key mapping
-let mapleader=" "
 map <f2> :w! <CR>
 map <f3> :source ~/.vimrc \| let @/ = ""<CR>
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-lu>
