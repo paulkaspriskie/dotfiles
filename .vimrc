@@ -7,6 +7,7 @@ Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sirver/ultisnips'
 Plug 'joshdick/onedark.vim'
+Plug 'drewtempelmeyer/palenight.vim'
 Plug 'pangloss/vim-javascript'
 call plug#end()
 
@@ -57,7 +58,14 @@ set ignorecase
 "Color-scheme
 set t_Co=256
 set background=dark
-colorscheme onedark
+colorscheme palenight
+
+let g:lightline = {}
+let g:lightline.colorscheme = 'palenight'
+
+if (has("termguicolors"))
+  set termguicolors
+endif
 
 "Persistent Undo
 if has('persistent_undo')
