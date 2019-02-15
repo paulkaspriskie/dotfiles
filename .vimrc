@@ -1,4 +1,4 @@
-" Vim-Plug Setup
+"Vim-Plug Setup
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
@@ -7,7 +7,6 @@ Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
 Plug 'sirver/ultisnips'
 Plug 'joshdick/onedark.vim'
-Plug 'drewtempelmeyer/palenight.vim'
 Plug 'pangloss/vim-javascript'
 call plug#end()
 
@@ -18,7 +17,6 @@ set shell=sh
 set nocompatible
 set hidden
 set encoding=utf-8
-set laststatus=2
 set visualbell
 set lazyredraw
 set history=100
@@ -58,14 +56,16 @@ set ignorecase
 "Color-scheme
 set t_Co=256
 set background=dark
-colorscheme palenight
+let g:solarized_use16 = 1
+colorscheme solarized8_high
 
-let g:lightline = {}
-let g:lightline.colorscheme = 'palenight'
-
-if (has("termguicolors"))
-  set termguicolors
-endif
+"Lightline config
+set laststatus=2
+let g:lightline = {'colorscheme': 'solarized'}
+let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
+let s:palette.inactive.middle = s:palette.normal.middle
+let s:palette.tabline.middle = s:palette.normal.middle
 
 "Persistent Undo
 if has('persistent_undo')
