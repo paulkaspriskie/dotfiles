@@ -1,10 +1,14 @@
-# Better navigation
+# General aliases
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias .....="cd ../../../.."
+alias c="clear"
 
 
 # Git aliases
 alias undopush="git push -f origin HEAD^:master"
+
+
+# Dev server alias
+alias drupalDev="ssh tug36513@drupal-dev-1.temple.edu"
 
