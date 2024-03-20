@@ -48,7 +48,5 @@ set laststatus=2
 let g:airline_theme='base16_gruvbox_dark_hard'
 
 "Key mapping
-"map <f2> :w! <CR>
-"map <f3> :source ~/.vimrc \| let @/ = ""<CR>
-"nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-lu>
-"set pastetoggle=<F4>
+map <f2> :w! <CR>
+map <f3> :source ~/.vimrc \| let @/ = ""<CR>
