@@ -33,6 +33,8 @@ set ruler
 set nowrap
 set linebreak
 set showmatch
+set expandtab
+set tabstop=2
 let g:javascript_plugin_jsdoc = 1
 "Removes trailing white spaces before save.
 autocmd BufWritePre * :%s/\s\+$//e
@@ -50,3 +52,4 @@ let g:airline_theme='base16_gruvbox_dark_hard'
 "Key mapping
 map <f2> :w! <CR>
 map <f3> :source ~/.vimrc \| let @/ = ""<CR>
+"set pastetoggle=<F4>
